@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exceptional Opening Hours & Closures - Hotelli Suoratalo</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #2e2b34 60%, #6a5c7a 100%);
+      color: #e7d9f2;
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background-image: url('https://www.transparenttextures.com/patterns/diagmonds-light.png');
+    }
+    a {
+      color: #9d4edd;
+      text-decoration: underline wavy #a7c957;
+      transition: color 0.2s;
+    }
+    a:hover {
+      color: #e63946;
+      text-shadow: 0 0 6px #fff, 0 0 2px #b5179e;
+    }
+    h1, h2 {
+      font-family: 'Impact', 'Arial Black', fantasy, monospace;
+      letter-spacing: 2px;
+      color: #fff0fa;
+      margin-top: 35px;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 9px #1c1020, 0 0 2px #c77dff;
+    }
+    h1 {
+      font-size: 2.2em;
+      border-bottom: 2px solid #b5179e;
+      padding-bottom: 8px;
+      margin-top: 0;
+      background: linear-gradient(90deg, #3c096c 0%, #720026 100%);
+      padding-left: 14px;
+      border-radius: 0 0 20px 0;
+      box-shadow: 0 4px 18px #0b001d88;
+    }
+    h2 {
+      font-size: 1.5em;
+      border-left: 6px double #a7c957;
+      padding-left: 12px;
+      margin-bottom: 10px;
+    }
+    ul {
+      background-color: #3c096c22;
+      border-left: 4px solid #9d4edd;
+      padding: 15px 32px 15px 36px;
+      margin: 20px 0 20px 0;
+      border-radius: 14px;
+      font-size: 1.1em;
+      box-shadow: 0 0 10px #4a1850;
+    }
+    li {
+      margin-bottom: 13px;
+    }
+    .section {
+      max-width: 720px;
+      margin: 38px auto;
+      background: rgba(15,9,27,0.94);
+      border: 2px solid #5f3867;
+      border-radius: 22px;
+      padding: 38px 38px 28px 38px;
+      box-shadow: 0 0 40px #0b001d99, 0 0 10px #e7d9f222 inset;
+      position: relative;
+    }
+    .creepy-divider {
+      border: none;
+      height: 2px;
+      background: repeating-linear-gradient(90deg, #4a1850 0 14px, #e63946 14px 18px);
+      margin: 40px 0 36px 0;
+      box-shadow: 0 0 14px #d90429cc;
+    }
+    .creepy-img {
+      display: block;
+      margin: 28px auto 22px auto;
+      border: 5px solid #2e2b34;
+      box-shadow: 0 0 40px #00000099, 0 0 8px #720026bb;
+      border-radius: 10px;
+      max-width: 94%;
+      filter: brightness(0.82) contrast(1.15) grayscale(0.18) saturate(1.25);
+      transition: filter 0.3s;
+    }
+    .creepy-img:hover {
+      filter: brightness(0.62) contrast(1.45) grayscale(0.35) sepia(0.1) blur(1.5px);
+      box-shadow: 0 0 60px 10px #b5179e77;
+    }
+    .caption {
+      color: #bcbcbc;
+      font-size: 0.97em;
+      text-align: center;
+      margin-top: 4px;
+      margin-bottom: 23px;
+      font-style: italic;
+      letter-spacing: 1px;
+      text-shadow: 0 0 3px #222;
+    }
+    .footer-links {
+      display: block;
+      margin: 50px auto 0 auto;
+      font-size: 1.08em;
+      text-align: center;
+      border-top: 1px dashed #a7c957;
+      padding-top: 18px;
+      color: #c77dff;
+      text-shadow: 0 0 4px #1c1020;
+    }
+    strong {
+      color: #f48b29;
+      text-shadow: 0 0 6px #1c1020;
+    }
+    em {
+      color: #a7c957;
+    }
+    @media (max-width: 800px) {
+      .section {
+        padding: 15px 3vw 18px 3vw;
+      }
+      h1 {
+        font-size: 1.2em;
+        padding-left: 7px;
+      }
+      h2 {
+        font-size: 1em;
+        padding-left: 4px;
+      }
+    }
+    /* Flicker effect for 90s/creepy vibe */
+    @keyframes flicker {
+      0% { opacity: 1; }
+      4% { opacity: 0.9; }
+      8% { opacity: 0.85; }
+      12% { opacity: 0.95; }
+      16% { opacity: 0.8; }
+      20% { opacity: 1; }
+      24% { opacity: 0.85; }
+      28% { opacity: 0.9; }
+      32% { opacity: 1; }
+      100% { opacity: 1; }
+    }
+    h1, h2 {
+      animation: flicker 4s infinite alternate;
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <h1>Exceptional Opening Hours &amp; Closures</h1>
+    <p>
+      Sometimes life in Imatra brings special days and events—which also means our opening hours at Hotelli Suoratalo may change a little. Here you’ll find up-to-date information about exceptional reception and restaurant hours, as well as temporary closures. If you have any questions, our reception team (especially Anna Korhonen) is always happy to clarify—just 
+      <a href="guest_arrival_&_stay_information.html">contact us</a> or ask at the desk.
+    </p>
+    <a href="images/hotel_exterior.jpg" target="_blank">
+      <img src="images/hotel_exterior.jpg" alt="Hotel exterior in early summer morning, quiet street view" class="creepy-img">
+    </a>
+    <div class="caption">
+      Hotel exterior in early summer morning, quiet street view
+    </div>
+    <hr class="creepy-divider">
+    <h2>Reception – Exceptional Opening Hours</h2>
+    <ul>
+      <li>
+        <strong>Friday, 12 April 2024:</strong><br>
+        Open 05:00–21:00
+      </li>
+      <li>
+        <strong>Laurikkala Saturday, 24 June 2024:</strong><br>
+        Open 06:30–20:00
+      </li>
+      <li>
+        <strong>Skandian Regatta, 23 June 2024:</strong><br>
+        Open 05:00–21:00
+      </li>
+      <li>
+        <strong>Virmalion Oy event, 13 March 2024:</strong><br>
+        Open 07:45–18:00
+      </li>
+    </ul>
+    <p>
+      If your arrival or departure falls outside these hours, please let us know in advance. We will do our best to arrange smooth check-in and check-out for you. For more details about general arrival, see 
+      <a href="guest_arrival_&_stay_information.html">Guest Arrival &amp; Stay Information</a>.
+    </p>
+    <hr class="creepy-divider">
+    <h2>Restaurant Imatra Bistro – Closures</h2>
+    <ul>
+      <li>
+        <strong>Closed 15 July – 22 July 2023</strong><br>
+        (Annual summer break – hope you had a good picnic instead!)
+      </li>
+      <li>
+        <strong>Closed 18 October 2022</strong><br>
+        (We hope everyone found coffee somewhere else for the day.)
+      </li>
+    </ul>
+    <p>
+      For normal breakfast and restaurant hours, please check 
+      <a href="aamupala_&_aamiaistarjoilu.html">Aamupala &amp; Aamiaistarjoilu</a>.
+    </p>
+    <a href="images/restaurant_closed.jpg" target="_blank">
+      <img src="images/restaurant_closed.jpg" alt="Imatra Bistro with empty tables, lights off, sign on door" class="creepy-img">
+    </a>
+    <div class="caption">
+      Imatra Bistro with empty tables, lights off, sign on door
+    </div>
+    <hr class="creepy-divider">
+    <h2>A Bit of Local Colour</h2>
+    <p>
+      Sometimes these exceptional hours are due to local festivals, maintenance, or even just because our small team needs a well-deserved rest. We always aim to keep any inconvenience to a minimum and will keep you posted on 
+      <a href="ajankohtaista_ja_tiedotteet.html">Current News and Announcements</a>.
+    </p>
+    <a href="images/reception_desk.jpg" target="_blank">
+      <img src="images/reception_desk.jpg" alt="Reception area with friendly staff, Finnish brochures on the counter" class="creepy-img">
+    </a>
+    <div class="caption">
+      Reception area with friendly staff, Finnish brochures on the counter
+    </div>
+    <p>
+      If you experience any problems or notice incorrect information, please use our 
+      <a href="error_reporting_and_troubleshooting.html">Error Reporting and Troubleshooting</a> page.
+    </p>
+    <hr class="creepy-divider">
+    <p>
+      Thank you for your understanding and for choosing our family-run hotel in the heart of Imatra. We look forward to welcoming you—even on exceptional days!
+    </p>
+    <div class="footer-links">
+      <strong>Back to <a href="index.html">Home</a> | <a href="talon_säännöt.html">House Rules</a> | <a href="guest_arrival_&_stay_information.html">Contact &amp; Arrival Info</a></strong>.
+    </div>
+  </div>
+
+</body>
+</html>

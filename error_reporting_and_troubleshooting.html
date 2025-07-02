@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Error Reporting and Troubleshooting - Hotelli Suoratalo</title>
+  <style>
+    body {
+      background: #191923 url('images/hotel_exterior.jpg') no-repeat top right fixed;
+      color: #e0dede;
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 0;
+      background-size: 40% auto;
+    }
+    .container {
+      background: rgba(33, 31, 36, 0.93);
+      max-width: 720px;
+      margin: 40px auto 40px 60px;
+      border: 2px solid #b6ad9a;
+      box-shadow: 0 0 24px 8px #2c2c2c;
+      padding: 32px 36px 36px 36px;
+      border-radius: 6px;
+      position: relative;
+    }
+    h1, h2, h3 {
+      font-family: 'Impact', 'Arial Black', fantasy, monospace;
+      color: #fffed6;
+      text-shadow: 2px 2px 8px #4d4a39, 0 0 1px #e6c13a;
+      letter-spacing: 2px;
+    }
+    h1 {
+      font-size: 2.6em;
+      margin-top: 0;
+      margin-bottom: 18px;
+    }
+    h2 {
+      font-size: 1.5em;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+    hr, .divider {
+      border: none;
+      height: 2px;
+      background: linear-gradient(90deg, #b6ad9a 0%, #353534 100%);
+      margin: 32px 0 28px 0;
+    }
+    ul, ol {
+      margin-left: 22px;
+      padding-left: 6px;
+    }
+    a {
+      color: #c1f7c0;
+      text-decoration: underline;
+      text-shadow: 0 0 4px #5d8a6d;
+    }
+    a:hover {
+      color: #f5bc8c;
+      text-shadow: 0 0 12px #e6c13a, 2px 2px 8px #4d4a39;
+      background: #2c2b21;
+    }
+    blockquote {
+      color: #ffecb3;
+      background: #23201b;
+      border-left: 6px solid #4d4a39;
+      padding: 12px 18px;
+      font-size: 1.18em;
+      font-style: italic;
+      margin: 18px 0 24px 0;
+      box-shadow: 0 0 10px #3b392d inset;
+    }
+    .image-caption {
+      font-size: 0.97em;
+      color: #a8a69d;
+      text-align: left;
+      margin-bottom: 16px;
+      margin-top: -5px;
+      font-style: italic;
+      letter-spacing: 1px;
+      text-shadow: 0 0 2px #000;
+    }
+    img {
+      display: block;
+      margin: 26px auto 8px auto;
+      border: 3px solid #b6ad9a;
+      box-shadow: 0 0 22px 6px #2c2b21;
+      max-width: 95%;
+      border-radius: 3px;
+      filter: grayscale(35%) contrast(1.05) brightness(0.93);
+      transition: filter 0.3s;
+    }
+    img:hover {
+      filter: grayscale(0%) brightness(1.03) saturate(1.07);
+      box-shadow: 0 0 40px 12px #e6c13a;
+    }
+    .contact-info {
+      background: #22201d;
+      border: 1px dashed #b6ad9a;
+      padding: 16px 18px 14px 18px;
+      margin: 18px 0 24px 0;
+      font-size: 1.1em;
+      color: #ffe4c4;
+      text-shadow: 0 0 5px #4d4a39;
+    }
+    .footer {
+      text-align: center;
+      color: #b6ad9a;
+      font-size: 1.03em;
+      margin-top: 48px;
+      padding-bottom: 12px;
+      text-shadow: 0 0 3px #222;
+    }
+    /* Flickering neon effect for a touch of 90s weirdness */
+    .neon {
+      color: #e6c13a;
+      text-shadow:
+        0 0 7px #fffed6,
+        0 0 10px #e6c13a,
+        0 0 21px #e6c13a,
+        0 0 42px #e6c13a,
+        0 0 82px #e6c13a,
+        0 0 92px #e6c13a,
+        0 0 102px #e6c13a,
+        0 0 151px #e6c13a;
+      animation: flicker 2.5s infinite alternate;
+    }
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+      }
+      20%, 22%, 24%, 55% {
+        opacity: 0.7;
+      }
+    }
+    /* Subtle scanline effect */
+    body:before {
+      content: "";
+      display: block;
+      position: fixed;
+      z-index: 0;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      pointer-events: none;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(60,60,60,0.03) 0px,
+        rgba(60,60,60,0.03) 1px,
+        transparent 2px,
+        transparent 4px
+      );
+      mix-blend-mode: multiply;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="neon">Error Reporting and Troubleshooting</h1>
+    <p>
+      At Hotelli Suoratalo, we want your booking and stay in Imatra to go as smoothly as possible. Sometimes, though, technology is not as friendly as our staff, and errors may occur. If you have run into a problem on our website—such as an error message when trying to book a room—this page is here to help.
+    </p>
+    <div>
+      <img src="images/hotel_exterior.jpg" alt="Hotel exterior with evening lights, hinting at a friendly small-town atmosphere">
+      <div class="image-caption">Hotel exterior with evening lights, hinting at a friendly small-town atmosphere</div>
+    </div>
+    <div class="divider"></div>
+    <h2>Common Booking Errors</h2>
+    <p>If you see a message like:</p>
+    <blockquote>
+      <strong>"Zenvitia Systems: An application error occurred on the server..."</strong>
+    </blockquote>
+    <p>
+      Or if your browser (Ilmarix, Velluno, or any other) refuses to let you book a room, please don’t panic. First, try to refresh the page or clear your browser’s cache. Sometimes the simplest fixes work best—even in Finland.
+    </p>
+    <p>
+      If the problem continues, it’s probably not on your end. Our website may be experiencing a technical hiccup, which our team (and sometimes outside experts) will need to fix.
+    </p>
+    <div class="divider"></div>
+    <h2>What Should I Do Now?</h2>
+    <ol>
+      <li>
+        <strong>Contact Us Directly</strong><br>
+        Our reception team, led by Anna Korhonen, is here 24/7. Please call us at <strong>+358 123 4567</strong> or email <strong>suoratalo@suoratalo.fi</strong>.<br>
+        We can check room availability and make the booking for you the "old-fashioned" way—yes, with a real person.
+      </li>
+      <li>
+        <strong>Let Us Know About the Error</strong><br>
+        If possible, send us a screenshot of the error message or describe what happened. This helps us (and our IT friends) solve the problem faster.
+      </li>
+      <li>
+        <strong>Visit Us in Person</strong><br>
+        If you’re already in Imatra, you can always stop by reception at Koskenparras 3. Sometimes a friendly chat is the best troubleshooting tool.
+      </li>
+    </ol>
+    <div class="divider"></div>
+    <h2>Our Troubleshooting Process</h2>
+    <ul>
+      <li>We take all technical issues seriously, even if our solutions sometimes involve more coffee than code.</li>
+      <li>Our IT partners are notified automatically of most errors, but your feedback really helps.</li>
+      <li>
+        We will post updates about major issues on our
+        <a href="ajankohtaista_ja_tiedotteet.html">Announcements &amp; News</a> page.
+      </li>
+    </ul>
+    <div>
+      <img src="images/image (17).webp" alt="Reception desk with Anna Korhonen ready to help, with a slightly awkward smile">
+      <div class="image-caption">Reception desk with Anna Korhonen ready to help, with a slightly awkward smile</div>
+    </div>
+    <div class="divider"></div>
+    <h2>More Help</h2>
+    <ul>
+      <li>
+        <a href="guest_arrival_&_stay_information.html">Guest Arrival &amp; Stay Information</a> – For practical info about your visit
+      </li>
+      <li>
+        <a href="talon_säännöt.html">House Rules</a> – For a smooth stay
+      </li>
+      <li>
+        <a href="siivouspalvelut_ja_huoneiden_puhdistus.html">Cleaning and Housekeeping</a> – If you want to report a non-IT related issue
+      </li>
+    </ul>
+    <div class="divider"></div>
+    <h2>Thank You for Your Patience</h2>
+    <p>
+      We know technical errors can be frustrating. Our small team at Hotelli Suoratalo appreciates your understanding while we get things sorted. Sometimes technology needs a little Finnish perseverance—and maybe a sauna break.
+    </p>
+    <p>
+      If you have suggestions for how we can improve, or if you want to report a non-technical issue, please use our
+      <a href="asiakastyytyväisyyskysely.html">Customer Satisfaction Survey</a>.
+    </p>
+    <div>
+      <img src="images/P1190810.jpg" alt="Cosy guest room, showing a peaceful space to relax after technical troubles">
+      <div class="image-caption">Cosy guest room, showing a peaceful space to relax after technical troubles</div>
+    </div>
+    <div class="divider"></div>
+    <div class="footer">
+      <strong>We are always here to help, even if it takes a few tries to get it right.<br>
+      Tervetuloa – and thank you for staying patient with us!</strong>
+    </div>
+  </div>
+
+</body>
+</html>

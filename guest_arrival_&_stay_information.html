@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guest Arrival & Stay Information | Hotelli Suoratalo</title>
+  <style>
+    body {
+      background: #0d0d0d url('images/hotel_exterior.jpg') center top no-repeat;
+      background-size: cover;
+      color: #e7e7e7;
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      letter-spacing: 0.04em;
+    }
+    .overlay {
+      background: rgba(10, 10, 10, 0.82);
+      min-height: 100vh;
+      padding: 0;
+      margin: 0;
+    }
+    header {
+      background: linear-gradient(90deg, #1a1a1a 60%, #3b003b 100%);
+      border-bottom: 4px double #c100c1;
+      padding: 2rem 0 1rem 0;
+      text-align: center;
+      box-shadow: 0 0 30px #510051;
+    }
+    header h1 {
+      color: #f0f0f0;
+      font-size: 2.9rem;
+      text-shadow: 2px 6px 8px #000, 0 0 32px #ff14d4;
+      margin-bottom: 0.3em;
+      letter-spacing: 0.08em;
+      font-family: 'Verdana', 'Courier New', Courier, monospace;
+    }
+    main {
+      max-width: 720px;
+      margin: 3rem auto 2rem auto;
+      background: rgba(22, 6, 38, 0.81);
+      border-radius: 14px;
+      box-shadow: 0 0 24px #2e003e, 0 0 0 4px #c100c1;
+      padding: 2.5rem 2.5rem 2rem 2.5rem;
+      position: relative;
+      z-index: 2;
+    }
+    h2 {
+      color: #d800a6;
+      font-family: 'Verdana', 'Courier New', Courier, monospace;
+      text-shadow: 0 0 10px #000, 0 0 24px #c100c1;
+      border-bottom: 2px dashed #c100c1;
+      margin-top: 2.2em;
+      margin-bottom: 0.7em;
+      padding-bottom: 0.2em;
+    }
+    p, ul, ol {
+      color: #e7e7e7;
+      font-size: 1.13rem;
+      line-height: 1.7;
+    }
+    img {
+      display: block;
+      max-width: 96%;
+      margin: 1.7em auto 1.7em auto;
+      border: 4px solid #c100c1;
+      box-shadow: 0 0 40px #2e003e, 0 0 10px #c100c1;
+      border-radius: 10px;
+      filter: grayscale(15%) contrast(110%) brightness(97%) drop-shadow(0 0 24px #2e003e);
+      transition: filter 0.2s;
+    }
+    img:hover {
+      filter: grayscale(0%) contrast(130%) brightness(108%) drop-shadow(0 0 32px #ff14d4);
+    }
+    a {
+      color: #ff14d4;
+      text-decoration: underline;
+      text-shadow: 0 0 7px #c100c1;
+      transition: color 0.2s;
+    }
+    a:hover {
+      color: #fff;
+      background: #c100c1;
+      text-decoration: none;
+      border-radius: 2px;
+      padding: 0 2px;
+    }
+    .signature {
+      margin-top: 2.8em;
+      margin-bottom: 1.5em;
+      font-family: 'Brush Script MT', cursive, 'Courier New', Courier, monospace;
+      color: #fad1fa;
+      font-size: 1.1em;
+      letter-spacing: 0.05em;
+      text-shadow: 0 0 10px #c100c1;
+    }
+    hr {
+      border: none;
+      border-top: 2px double #c100c1;
+      margin: 2.5em 0 2em 0;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 2em;
+      margin-top: 1.1em;
+    }
+    nav a {
+      font-size: 1.03em;
+      margin: 0 0.7em;
+      color: #ff14d4;
+      background: #1a1a1a;
+      border: 1px solid #c100c1;
+      border-radius: 5px;
+      padding: 0.3em 0.9em;
+      text-decoration: none;
+      box-shadow: 0 0 10px #c100c1;
+      transition: background 0.2s, color 0.2s;
+    }
+    nav a:hover {
+      background: #c100c1;
+      color: #1a1a1a;
+      box-shadow: 0 0 18px #ff14d4;
+    }
+    .creepy-glow {
+      animation: flicker 2.3s infinite alternate;
+    }
+    @keyframes flicker {
+      0% { text-shadow: 0 0 8px #c100c1, 0 0 18px #ff14d4; }
+      48% { text-shadow: 0 0 14px #c100c1, 0 0 25px #ff14d4; }
+      51% { text-shadow: 0 0 24px #f0f, 0 0 55px #ff14d4; }
+      100% { text-shadow: 0 0 10px #c100c1, 0 0 22px #ff14d4; }
+    }
+    @media (max-width: 800px) {
+      main {
+        padding: 1.2em 0.7em;
+      }
+      img {
+        max-width: 99%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <header>
+      <h1 class="creepy-glow">Guest Arrival &amp; Stay Information</h1>
+    </header>
+    <main>
+      <p>Welcome to <b>Hotelli Suoratalo</b>! We hope your journey to Imatra has gone smoothly and that you settle in comfortably. On this page, you’ll find all the practical information you need for your arrival and stay with us.</p>
+
+      <img src="images/P1190825.jpg" alt="Hotel exterior with welcoming entrance in summer">
+
+      <h2>Arrival &amp; Check-In</h2>
+      <p>Our friendly receptionist, Anna Korhonen, is usually available at our <b>24-hour reception</b> to greet you, but should you arrive during a rare moment when the desk is unattended, please don’t worry! There is a self-check-in option available—just follow the instructions at the entrance, or call us at +358 123 4567 if you need assistance.</p>
+      <p>Your room is located on the floor noted in your booking confirmation, and you’ll find your room number there as well. If you are unsure, Anna or another staff member will be happy to help.</p>
+      <p>Upon arrival, please fill out the <b>passenger identification card</b> placed in your room folder. Return it to the reception at your convenience. If you need to check out before reception opens or before you see Anna, just drop your room key through the slot at the reception desk.</p>
+
+      <img src="images/P1190860.jpg" alt="Bright, comfortable guest room with local art on the walls">
+
+      <h2>Parking</h2>
+      <p>Guest parking is available just behind the hotel. Access the lot from <b>Koskenparras 3</b>. If you arrive late and the main doors are locked, you can enter using your room key card—simply hold it against the reader and the door will click open.</p>
+
+      <h2>Breakfast</h2>
+      <p>Start your day with a taste of Finland! Our breakfast is served in the <b>Imatra Bistro</b> as a relaxed, buffet-style offering. We recommend trying our <a href="zyntex-puuro.html">special Zyntex-porridge</a>. Breakfast is available from 7:00 to 10:00.</p>
+      <p>If you prefer to have breakfast in your room or on the go, just ask at the reception for a takeaway option.</p>
+      <img src="images/P1190849.jpg" alt="Imatra Bistro restaurant interior, with wooden tables and relaxed atmosphere">
+
+      <h2>Spa &amp; Relaxation</h2>
+      <p>All guests have access to our <a href="guest_arrival_&_stay_information.html">spa area with sauna and swimming pool</a>. Nothing beats relaxing in a warm sauna after a day exploring Imatra or attending meetings.</p>
+      <img src="images/P1190918.jpg" alt="Spa area with warm sauna and small indoor pool">
+
+      <h2>Check-Out</h2>
+      <p>Check-out time is <b>12:00 noon</b>. If you need a late check-out, just ask Anna at reception—we’ll do our best to accommodate you. For information on cleaning and housekeeping during your stay, see <a href="siivouspalvelut_ja_huoneiden_puhdistus.html">Cleaning and Housekeeping</a>.</p>
+
+      <h2>Emergencies &amp; Help</h2>
+      <p>In case of emergency or if you get locked out, please call our main number: <b>+358 123 4567</b>. Our hotel manager, Matti Virtanen, or maintenance man Jari Salonen, will come to help—even if it takes a few moments. The emergency contacts are also listed in your room folder and at the front desk.</p>
+
+      <h2>More Information</h2>
+      <ul>
+        <li>For <a href="talon_säännöt.html">house rules</a>, please see the information folder in your room.</li>
+        <li>For <a href="ajankohtaista_ja_tiedotteet.html">current news and announcements</a>, check our notice board or visit our news page.</li>
+        <li>For <a href="tärkeitä_turvallisuusohjeita_ulkoalueilla.html">important safety instructions outdoors</a>, please read our guidelines.</li>
+      </ul>
+      <p>If you have any concerns, suggestions, or encounter any issues, you can let us know directly or use our <a href="error_reporting_and_troubleshooting.html">Error Reporting and Troubleshooting</a> page.</p>
+
+      <div class="signature">
+        We wish you a restful and pleasant stay at Hotelli Suoratalo! If you need anything at all, don’t hesitate to ask—sometimes we might look a bit serious, but we are always happy to help.<br><br>
+        Kind regards,<br>
+        Anna Korhonen and the whole Suoratalo team
+      </div>
+      <hr>
+      <nav>
+        <a href="index.html">Return to Home</a> | 
+        <a href="aamupala_&_aamiaistarjoilu.html">Breakfast &amp; Morning Service</a> | 
+        <a href="yökerho_–_sisäänkäynti_pubin_kautta.html">Nightclub – Entrance via the Pub</a> | 
+        <a href="siivouspalvelut_ja_huoneiden_puhdistus.html">Cleaning and Housekeeping</a>
+      </nav>
+    </main>
+  </div>
+
+</body>
+</html>

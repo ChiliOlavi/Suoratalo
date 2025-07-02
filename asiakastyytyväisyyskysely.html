@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Guest Satisfaction Survey – Hotelli Suoratalo</title>
+<style>
+    body {
+        background: #0a0a0a url('https://www.transparenttextures.com/patterns/noise.png');
+        color: #e0dfd1;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 0;
+        padding: 0 0 40px 0;
+        min-height: 100vh;
+    }
+    h1, h2 {
+        color: #ffc900;
+        font-family: 'Copperplate', 'Impact', sans-serif;
+        text-shadow: 2px 2px 8px #660000, 0 0 12px #111;
+        background: linear-gradient(90deg, #1d1b10 40%, #2b1905 100%);
+        padding: 10px 20px;
+        border-radius: 9px;
+        margin: 25px 0 10px 0;
+        border-bottom: 2px solid #ffec82;
+        letter-spacing: 1px;
+    }
+    h1 {
+        font-size: 2.2em;
+        margin-top: 0;
+    }
+    h2 {
+        font-size: 1.4em;
+        margin-top: 35px;
+    }
+    a {
+        color: #ffec82;
+        text-decoration: underline wavy #c49a36;
+        transition: color 0.2s;
+    }
+    a:hover {
+        color: #ff0000;
+        text-shadow: 0 0 6px #fff, 0 0 20px #ffec82;
+    }
+    hr, .divider {
+        border: none;
+        border-top: 2px dashed #ffec82;
+        margin: 35px 0 25px 0;
+        height: 0;
+        background: none;
+    }
+    .section {
+        background: rgba(30, 28, 20, 0.89);
+        box-shadow: 0 0 30px 4px #1d1b10, 0 0 7px 0 #c49a36 inset;
+        border-radius: 14px;
+        padding: 30px 20px 25px 20px;
+        margin: 28px 0 25px 0;
+        border: 2px solid #222;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    label {
+        display: block;
+        margin: 7px 0 4px 0;
+        font-size: 1em;
+        color: #e8d49a;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    .question {
+        margin: 18px 0 6px 0;
+        padding: 7px 0 1px 0;
+        font-size: 1.08em;
+        color: #ffec82;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .options {
+        margin-left: 25px;
+        margin-bottom: 10px;
+        font-size: 1em;
+        color: #f3e7b8;
+    }
+    .write-in {
+        display: inline-block;
+        width: 320px;
+        border: 1px solid #c49a36;
+        background: #222;
+        color: #f7e6c4;
+        margin-left: 15px;
+        padding: 4px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1em;
+    }
+    table {
+        border-collapse: collapse;
+        width: 98%;
+        margin: 20px auto 30px auto;
+        background: rgba(25, 23, 17, 0.97);
+        box-shadow: 0 0 14px 2px #2b1905;
+        border-radius: 6px;
+        font-size: 1em;
+    }
+    th, td {
+        border: 1px solid #ffec82;
+        padding: 9px 7px;
+        text-align: center;
+    }
+    th {
+        background: #2b1905;
+        color: #ffec82;
+        font-weight: bold;
+        font-size: 1.05em;
+    }
+    tr:nth-child(even) {
+        background: #18160f;
+    }
+    tr:nth-child(odd) {
+        background: #211d12;
+    }
+    .feedback-area {
+        width: 96%;
+        min-height: 85px;
+        background: #18160f;
+        border: 1px solid #c49a36;
+        color: #ece6d0;
+        font-size: 1em;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 12px 0 25px 0;
+        padding: 8px;
+        border-radius: 7px;
+        box-shadow: 0 0 5px 2px #2b1905 inset;
+        display: block;
+    }
+    .image-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 29px;
+        justify-content: center;
+        margin: 38px 0 28px 0;
+    }
+    .image-block {
+        background: #191710;
+        border: 2px solid #c49a36;
+        border-radius: 7px;
+        box-shadow: 0 0 20px 3px #140c04;
+        padding: 9px 10px 12px 10px;
+        margin: 0 6px 10px 6px;
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: box-shadow 0.2s;
+    }
+    .image-block:hover {
+        box-shadow: 0 0 35px 10px #ffec82, 0 0 18px 2px #c49a36 inset;
+        background: #1d1b10;
+    }
+    .image-block img {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 5px;
+        box-shadow: 0 0 12px 3px #444;
+        margin-bottom: 7px;
+        margin-top: 4px;
+        filter: grayscale(20%) brightness(0.92) sepia(9%);
+        transition: filter 0.2s;
+    }
+    .image-block:hover img {
+        filter: grayscale(0%) brightness(1.1) sepia(0%);
+    }
+    .img-caption {
+        color: #ffec82;
+        font-size: 0.97em;
+        font-style: italic;
+        text-shadow: 1px 1px 6px #111;
+        text-align: center;
+    }
+    .footer {
+        text-align: center;
+        color: #b7a872;
+        font-size: 1em;
+        margin-top: 45px;
+        letter-spacing: 2px;
+        text-shadow: 0 0 5px #0a0a0a;
+    }
+    ::selection {
+        background: #ffec82;
+        color: #2b1905;
+    }
+</style>
+</head>
+<body>
+<div class="section">
+    <h1>Guest Satisfaction Survey – Hotelli Suoratalo</h1>
+    <p>We at Hotelli Suoratalo want to make sure your stay in Imatra feels as easy and comfortable as possible. Your feedback helps us improve and keep things cosy and friendly for everyone. This survey will only take a few minutes, and as a small thank you, every guest who returns a completed survey can enjoy a complimentary cup of coffee or tea at <a href="aamiaistarjoilu.html">Imatra Bistro</a>. Just mention your feedback at the restaurant!</p>
+    <p>If you have any questions about the survey, just ask our hotel manager Matti Virtanen or reception’s Anna Korhonen. We are always happy to listen, even if your feedback is a bit awkward (we are Finnish, after all).</p>
+</div>
+
+<div class="divider"></div>
+
+<div class="section">
+    <h2>Background Information</h2>
+    <div class="question">1. <b>Age:</b></div>
+    <div class="options">
+        ☐ Under 20 &nbsp; ☐ 20–35 &nbsp; ☐ 36–44 &nbsp; ☐ 45–60 &nbsp; ☐ Over 60
+    </div>
+
+    <div class="question">2. <b>Gender:</b></div>
+    <div class="options">
+        ☐ Female &nbsp; ☐ Male &nbsp; ☐ Prefer not to say
+    </div>
+
+    <div class="question">3. <b>Purpose of your trip:</b></div>
+    <div class="options">
+        ☐ Business &nbsp; ☐ Leisure
+    </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="section">
+    <h2>Booking Phase</h2>
+    <div class="question">4. <b>How did you make your reservation?</b></div>
+    <div class="options">
+        ☐ Online &nbsp; ☐ By email &nbsp; ☐ By phone
+    </div>
+
+    <div class="question">5. <b>How easy was it to book your stay?</b></div>
+    <div class="options">
+        ☐ Very easy &nbsp; ☐ Quite easy &nbsp; ☐ Difficult &nbsp; ☐ Very difficult
+    </div>
+
+    <div class="question">6. <b>Did you make any special requests during booking?</b></div>
+    <div class="options">
+        ☐ Yes &nbsp; ☐ No
+        <span style="display:inline-block; width:15px;"></span>
+        If yes, please specify:
+        <span class="write-in">&nbsp;</span>
+    </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="section">
+    <h2>Check-in Experience</h2>
+    <div class="question">7. <b>Were you welcomed at the reception?</b></div>
+    <div class="options">
+        ☐ Yes &nbsp; ☐ No &nbsp; ☐ Not sure
+    </div>
+
+    <div class="question">8. <b>Was the check-in friendly and professional?</b></div>
+    <div class="options">
+        ☐ Yes &nbsp; ☐ No &nbsp; ☐ Not sure
+    </div>
+
+    <div class="question">9. <b>Did check-in go smoothly and efficiently?</b></div>
+    <div class="options">
+        ☐ Yes &nbsp; ☐ No &nbsp; ☐ Not sure
+    </div>
+
+    <div class="question">10. <b>Did you receive enough useful information about the hotel upon check-in?</b></div>
+    <div class="options">
+        ☐ Yes, enough &nbsp; ☐ Some &nbsp; ☐ Not enough &nbsp; ☐ None
+    </div>
+
+    <div class="question">11. <b>Were you shown or given directions to your room?</b></div>
+    <div class="options">
+        ☐ Yes &nbsp; ☐ No &nbsp; ☐ Not sure
+    </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="section">
+    <h2>Your Stay</h2>
+    <div class="question">12. <b>Did you receive help or advice when needed?</b></div>
+    <div class="options">
+        ☐ Yes &nbsp; ☐ No &nbsp; ☐ Did not need help
+    </div>
+
+    <div class="question">13. <b>Was the staff helpful and attentive?</b></div>
+    <div class="options">
+        ☐ Yes &nbsp; ☐ No
+    </div>
+
+    <div class="question">14. <b>Did you use any extra services?</b></div>
+    <div class="options">
+        ☐ <a href="aamiaistarjoilu.html">Imatra Bistro</a> &nbsp; ☐ <a href="guest_arrival_&_stay_information.html">Spa Area</a> &nbsp; ☐ Meeting rooms &nbsp; ☐ <a href="yokerho_–_sisäänkäynti_pubin_kautta.html">Nightclub</a> &nbsp; ☐ No
+    </div>
+
+    <div class="question">15. <b>Did your room meet your expectations?</b></div>
+    <div class="options">
+        ☐ Completely &nbsp; ☐ Mostly &nbsp; ☐ Somewhat &nbsp; ☐ Not at all
+    </div>
+
+    <div class="question">16. <b>How was your overall stay at Hotelli Suoratalo?</b></div>
+    <div class="options">
+        ☐ Excellent &nbsp; ☐ Good &nbsp; ☐ Fair &nbsp; ☐ Poor &nbsp; ☐ Very Poor
+    </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="section">
+    <h2>Check-out</h2>
+    <div class="question">17. <b>Was check-out smooth and easy?</b></div>
+    <div class="options">
+        ☐ Very smooth &nbsp; ☐ Quite smooth &nbsp; ☐ Average &nbsp; ☐ Not smooth
+    </div>
+
+    <div class="question">18. <b>Did the reception staff ask how your stay was?</b></div>
+    <div class="options">
+        ☐ Yes &nbsp; ☐ No
+    </div>
+
+    <div class="question">19. <b>Were you invited to visit again?</b></div>
+    <div class="options">
+        ☐ Yes &nbsp; ☐ No
+    </div>
+
+    <div class="question">20. <b>Would you stay with us again?</b></div>
+    <div class="options">
+        ☐ Yes &nbsp; ☐ Maybe &nbsp; ☐ No
+    </div>
+
+    <div class="question">21. <b>Have you had any unexpected respiratory symptoms during your stay?</b></div>
+    <div class="options">
+        ☐ Yes &nbsp; ☐ No
+    </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="section">
+    <h2>Please rate the following <span style="font-size:0.8em;">(4 = Excellent, 3 = Good, 2 = Average, 1 = Poor, 0 = Don’t know)</span></h2>
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>4</th>
+            <th>3</th>
+            <th>2</th>
+            <th>1</th>
+            <th>0</th>
+        </tr>
+        <tr>
+            <td>Staff helpfulness</td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>Friendliness</td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>Professionalism</td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>Service smoothness</td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>Flexibility</td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>Accuracy</td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>Room cleanliness</td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>Room equipment</td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>Room comfort</td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>Reception look</td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>Reception cleanliness</td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>Reception comfort</td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+    </table>
+</div>
+
+<div class="divider"></div>
+
+<div class="section">
+    <h2>Additional Feedback</h2>
+    <p>Is there something we did especially well, or something we could still improve? Please let us know, honestly and in your own words.</p>
+    <textarea class="feedback-area" readonly>___________________________________________________________</textarea>
+</div>
+
+<div class="divider"></div>
+
+<div class="section">
+    <p>Thank you for your feedback! Please return your completed survey to reception or the restaurant. You can also email your thoughts to <a href="mailto:suoratalo@suoratalo.fi">suoratalo@suoratalo.fi</a>. For more information about our services, see <a href="guest_arrival_&_stay_information.html">Guest Arrival &amp; Stay Information</a> or <a href="ajankohtaista_ja_tiedotteet.html">Current News and Announcements</a>.</p>
+</div>
+
+<div class="image-gallery">
+    <div class="image-block">
+        <img src="images/hotel_exterior.jpg" alt="Hotel exterior with welcoming entrance in summer">
+        <div class="img-caption">Hotel exterior with welcoming entrance in summer</div>
+    </div>
+    <div class="image-block">
+        <img src="images/P1190852.JPG" alt="Bright, comfortable guest room with local art on the walls">
+        <div class="img-caption">Bright, comfortable guest room with local art on the walls</div>
+    </div>
+    <div class="image-block">
+        <img src="images/P1190744.jpg" alt="Imatra Bistro restaurant interior, with wooden tables and relaxed atmosphere">
+        <div class="img-caption">Imatra Bistro restaurant interior, with wooden tables and relaxed atmosphere</div>
+    </div>
+    <div class="image-block">
+        <img src="images/P1190917.jpg" alt="Spa area with warm sauna and small indoor pool">
+        <div class="img-caption">Spa area with warm sauna and small indoor pool</div>
+    </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="section">
+    <p>If you encounter any technical problems with the survey, please let us know via our <a href="error_reporting_and_troubleshooting.html">Error Reporting and Troubleshooting</a> page.</p>
+    <p>We appreciate your time and honesty. <b>Kiitos!</b></p>
+</div>
+
+<div class="footer">
+    &copy; 2024 Hotelli Suoratalo, Imatra &mdash; Dream deeper.<br>
+    <span style="font-size:0.9em; color:#746b45;">All rights reserved. <span style="font-family:serif;">☽</span></span>
+</div>
+</body>
+</html>
