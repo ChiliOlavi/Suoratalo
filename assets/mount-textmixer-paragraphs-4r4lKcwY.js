@@ -1,1 +1,0 @@
-import{c as e,j as r}from"./pipelines-DTrqgdQT.js";import{T as n}from"./textmixer-p5E4aX6W.js";document.querySelectorAll("p.mix-me").forEach(t=>{const o=t.textContent;t.innerHTML="",e.createRoot(t).render(r.jsx(n,{initialText:o}))});
