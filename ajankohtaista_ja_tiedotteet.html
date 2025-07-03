@@ -110,12 +110,25 @@
       padding: 0.3em 1em 0.3em 1em;
       letter-spacing: 0.04em;
     }
+    .mix-me {
+      font-style: normal;
+      font-weight: 400;
+      color: #e0e0e0;
+      background: rgba(20, 20, 20, 0.85);
+      border-radius: 8px;
+      padding: 1em;
+      margin: 1.5em 0;
+      border-left: 4px solid #6b2e5b;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>News and Announcements – Ajankohtaista ja Tiedotteet</h1>
-    <p>Welcome to the Hotelli Suoratalo news and announcements page. Here you’ll find the latest updates, event info, and some honest thoughts about hotel life here in Imatra. We don’t do things too fancy, but we do try to keep you in the loop.</p>
+    <p class="mix-me">
+      Welcome to the Hotelli Suoratalo news and announcements page. Here you’ll find the latest updates, event info, and some honest thoughts about hotel life here in Imatra. We don’t do things too fancy, but we do try to keep you in the loop.
+    </p>
 
     <img src="images/P1190827.JPG" alt="Hotel exterior during springtime, with a few guests arriving" class="img-shadow" title="Hotel exterior during springtime, with a few guests arriving">
 
@@ -230,12 +243,12 @@
 
     <div class="divider"></div>
 
-    <p>
+    <p class="mix-me">
       For all special opening times, see <a href="poikkeavat_aukioloajat_ja_sulkuajat.html">Poikkeavat Aukioloajat ja Sulkuajat</a>.<br>
       For tickets and event bookings, visit <a href="tapahtumien_ja_lippujen_myynti.html">Event Sales</a>.
     </p>
 
-    <div class="creepy-note">
+    <div class="creepy-note mix-me">
       Thank you for staying with us, even through the slow days and the busy ones. If you have any questions, ideas, or just want to chat about Imatra life, you’ll find Matti, Anna, or the rest of us at the reception – or somewhere close by.
     </div>
 
@@ -244,6 +257,6 @@
       The Hotelli Suoratalo Team.
     </div>
   </div>
-
+  <script type="module" src="/src/mount-textmixer-paragraphs.jsx"></script>
 </body>
 </html>

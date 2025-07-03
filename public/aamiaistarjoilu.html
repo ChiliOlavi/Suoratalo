@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Breakfast Service at Hotelli Suoratalo</title>
+  <style>
+    body {
+      background: #1b1b2f url('images/pattern_bg.gif') repeat;
+      color: #f5f5f5;
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 0;
+    }
+    a {
+      color: #ff6666;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: #ff0;
+      background: #222;
+    }
+    header {
+      background: linear-gradient(90deg, #2d193f 0%, #0d0d17 100%);
+      padding: 30px 0 20px 0;
+      text-align: center;
+      border-bottom: 4px double #c0a;
+      box-shadow: 0 8px 32px #000c;
+    }
+    header h1 {
+      font-size: 2.7em;
+      letter-spacing: 3px;
+      color: #f4e7ff;
+      text-shadow: 2px 2px 12px #a07, 0 0 8px #000;
+      margin: 0;
+      font-family: 'Impact', 'Arial Black', cursive;
+      text-transform: uppercase;
+    }
+    .container {
+      max-width: 730px;
+      margin: 32px auto;
+      background: rgba(34,20,45,0.85);
+      border: 3px solid #7c3a8c;
+      border-radius: 16px;
+      box-shadow: 0 0 44px #000b, 0 0 0 6px #4a235a inset;
+      padding: 34px 38px 34px 38px;
+      position: relative;
+      z-index: 2;
+    }
+    h2 {
+      color: #e4b0ff;
+      text-shadow: 1px 1px 6px #111, 0 0 8px #7a3;
+      font-family: 'Arial Black', Arial, sans-serif;
+      margin-top: 40px;
+      margin-bottom: 18px;
+      letter-spacing: 2px;
+      font-size: 1.5em;
+      border-bottom: 2px dashed #b36fff;
+      padding-bottom: 3px;
+      text-transform: uppercase;
+    }
+    ul {
+      margin: 18px 0 18px 30px;
+      padding: 0;
+      line-height: 1.7em;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    .section-img {
+      display: block;
+      margin: 36px auto 28px auto;
+      border: 6px double #ba8cf7;
+      box-shadow: 0 0 22px #000b, 0 0 18px #7c3a8c inset;
+      max-width: 100%;
+      width: 420px;
+      background: #27213c;
+      filter: brightness(0.92) contrast(1.2) saturate(1.1);
+      transition: filter 0.4s;
+    }
+    .section-img:hover {
+      filter: brightness(1.13) contrast(1.3) saturate(1.3);
+      box-shadow: 0 0 44px #e2b 0 0 0 8px #7c3a8c inset;
+    }
+    .img-caption {
+      color: #a399c7;
+      font-size: 0.98em;
+      text-align: center;
+      margin-top: 7px;
+      margin-bottom: 32px;
+      font-style: italic;
+      text-shadow: 0 0 7px #000a;
+    }
+    .info-list {
+      margin: 24px 0 24px 0;
+      padding: 0;
+      list-style: square inside;
+      color: #ffb4ff;
+      font-size: 1.07em;
+    }
+    .contact-info {
+      margin-top: 28px;
+      font-size: 1.04em;
+      color: #b4a7c7;
+      text-shadow: 0 0 6px #000c;
+      padding: 13px 20px;
+      border-left: 5px solid #9e4eea;
+      background: rgba(44,22,55,0.62);
+      border-radius: 7px;
+    }
+    .footer {
+      margin-top: 52px;
+      text-align: center;
+      color: #ff9;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1.15em;
+      letter-spacing: 1px;
+      text-shadow: 0 0 4px #a07, 0 0 12px #000;
+      padding: 20px 0 30px 0;
+      background: linear-gradient(90deg, #2d193f 0%, #0d0d17 100%);
+      border-top: 4px double #c0a;
+    }
+    strong {
+      color: #ffb4ff;
+      text-shadow: 0 0 7px #b36fff;
+    }
+    .creepy-shadow {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      height: 80px;
+      pointer-events: none;
+      z-index: 100;
+      background: linear-gradient(to top, #000e 60%, transparent 100%);
+      opacity: 0.88;
+    }
+    @media (max-width: 800px) {
+      .container {
+        padding: 15px 2vw;
+        max-width: 98vw;
+      }
+      .section-img {
+        width: 97vw;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Breakfast Service at Hotelli Suoratalo</h1>
+  </header>
+  <div class="container">
+    <p>Start your day in Imatra with a relaxed and hearty breakfast at Hotelli Suoratalo. Our breakfast buffet is served every morning in the cosy Imatra Bistro, right here in the heart of the hotel.</p>
+    <img src="/Suoratalo/assets/P1190745-pRDzI12x.JPG" alt="Imatra Bistro restaurant interior, with wooden tables and relaxed atmosphere" class="section-img">
+    <div class="img-caption">Imatra Bistro restaurant interior, with wooden tables and relaxed atmosphere</div>
+    <p><strong>Breakfast Opening Hours:</strong><br>
+      Every day from 06:00 to 10:00
+    </p>
+    <p>Whether you’re an early riser or prefer a slower start, there’s plenty of time to enjoy your morning meal. Our staff, including chef Liisa Nieminen, prepares a simple yet satisfying spread with a touch of Finnish tradition and a bit of small-town charm.</p>
+    <h2>What’s Included</h2>
+    <ul class="info-list">
+      <li>Fresh bread and rolls, butter, and local cheeses</li>
+      <li>Classic Finnish cold cuts</li>
+      <li>Boiled eggs</li>
+      <li>Porridge (including our <a href="zyntex-puuro.html">famous Zyntex-porridge</a>)</li>
+      <li>“Siriuksen Muroset” cereals for all ages</li>
+      <li>Yogurt, berries, and fruit</li>
+      <li>Seasonal vegetables</li>
+      <li>Filter coffee, tea, juice, and milk</li>
+    </ul>
+    <p>We also sometimes feature local products from the surrounding Narvenmaa and Aurion-Sun areas, especially during special weeks like “Lounarisyyskuu” (September Lunch Week), 14th–20th September. If you’re visiting during this time, you might spot a few extra treats on the buffet!</p>
+    <img src="/Suoratalo/assets/P1190753-BiocaaGM.JPG" alt="Bright breakfast buffet with Finnish breads, porridge, and coffee" class="section-img">
+    <div class="img-caption">Bright breakfast buffet with Finnish breads, porridge, and coffee</div>
+    <h2>Where to Find Breakfast</h2>
+    <p>Breakfast is served in <a href="aamiaistarjoilu.html">Imatra Bistro</a>, just next to the lobby. If you’re unsure where to go, Anna Korhonen at the reception is happy to point you in the right direction—sometimes with a small story about Imatra to go along.</p>
+    <h2>For Special Diets &amp; Early Departures</h2>
+    <p>If you have special dietary needs, please let us know in advance or mention it to the staff. We will do our best to accommodate you, even if it sometimes means a quick dash to the kitchen by Liisa herself.</p>
+    <p>For guests leaving before 06:00, we can prepare a simple takeaway breakfast—just let us know the evening before at reception.</p>
+    <img src="/Suoratalo/assets/P1190921-CHsKK1ap.JPG" alt="Bright, comfortable guest room with local art on the walls" class="section-img">
+    <div class="img-caption">Bright, comfortable guest room with local art on the walls</div>
+    <h2>More Information</h2>
+    <ul class="info-list">
+      <li><a href="zyntex-puuro.html">About our Zyntex-porridge</a></li>
+      <li><a href="guest_arrival_&_stay_information.html">Guest Arrival &amp; Stay Information</a></li>
+      <li><a href="talon_säännöt.html">House Rules</a></li>
+    </ul>
+    <div class="contact-info">
+      If you have questions or special requests, please contact us at <a href="tel:+3581234567">+358 123 4567</a> or <a href="mailto:suoratalo@suoratalo.fi">suoratalo@suoratalo.fi</a>, or just ask at the reception. We are always happy to help, even if it takes a minute.
+    </div>
+  </div>
+  <div class="footer">
+    Tervetuloa aamiaiselle – Welcome to breakfast!
+  </div>
+  <div class="creepy-shadow"></div>
+
+
+</body>
+</html>
