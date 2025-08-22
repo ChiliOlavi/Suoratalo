@@ -145,6 +145,19 @@
     h1, h2 {
       animation: flicker 4s infinite alternate;
     }
+    .hover-switch {
+      position: relative;
+      display: inline-block;
+    }
+    .hover-switch .hover-version {
+      display: none;
+    }
+    .hover-switch:hover .default {
+      display: none;
+    }
+    .hover-switch:hover .hover-version {
+      display: block;
+    }
   </style>
 </head>
 <body>
@@ -200,8 +213,8 @@
       For normal breakfast and restaurant hours, please check 
       <a href="aamupala_&_aamiaistarjoilu.html">Aamupala &amp; Aamiaistarjoilu</a>.
     </p>
-    <a href="images/restaurant_closed.jpg" target="_blank">
-      <img src="images/restaurant_closed.jpg" alt="Imatra Bistro with empty tables, lights off, sign on door" class="creepy-img">
+    <a href="images/20250816_211809.jpg" target="_blank">
+      <img src="images/20250816_211809.jpg" alt="Imatra Bistro with empty tables, lights off, sign on door" class="creepy-img">
     </a>
     <div class="caption">
       Imatra Bistro with empty tables, lights off, sign on door
@@ -212,9 +225,12 @@
       Sometimes these exceptional hours are due to local festivals, maintenance, or even just because our small team needs a well-deserved rest. We always aim to keep any inconvenience to a minimum and will keep you posted on 
       <a href="ajankohtaista_ja_tiedotteet.html">Current News and Announcements</a>.
     </p>
-    <a href="images/reception_desk.jpg" target="_blank">
-      <img src="images/reception_desk.jpg" alt="Reception area with friendly staff, Finnish brochures on the counter" class="creepy-img">
-    </a>
+    <div class="hover-switch">
+      <a href="images/P1190744.JPG" target="_blank" class="default">
+        <img src="images/P1190744.JPG" alt="Reception area with friendly staff, Finnish brochures on the counter" class="creepy-img">
+      </a>
+      <img src="images/image.webp" alt="Reception area with friendly staff, Finnish brochures on the counter" class="creepy-img hover-version">
+    </div>
     <div class="caption">
       Reception area with friendly staff, Finnish brochures on the counter
     </div>

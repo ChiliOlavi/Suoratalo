@@ -116,6 +116,33 @@
       .container { width: 95%; padding: 18px 8px; }
       .image-block img { max-width: 98%; }
     }
+    .hover-switch {
+  position: relative;
+  display: inline-block;
+  /* Set a common width for both images (adjust 300px as needed) */
+  width: 300px;
+  cursor: pointer;
+}
+.hover-switch img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s;
+}
+.hover-switch .hover-version {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.hover-switch:hover .default {
+  opacity: 0;
+}
+.hover-switch:hover .hover-version {
+  opacity: 1;
+  filter: brightness(0.62) contrast(1.45) grayscale(0.35) sepia(0.1) blur(1.5px);
+}
   </style>
 </head>
 <body>
@@ -154,11 +181,13 @@
       <span class="phone">+358 123 4567</span>. We will help you right away. Anna Korhonen or another staff member will assist you—no need to feel embarrassed, it happens even to the best of us!
     </p>
 
-    <div class="image-block">
-      <img src="images/image (16).webp" alt="Hotel staff member (Jari) spreading sand on snowy steps">
-      <span class="caption">Hotel staff member (Jari) spreading sand on snowy steps</span>
-    </div>
-
+   <!-- Replace any occurrence of P1190830.JPG with this hover-switch block -->
+  <div class="hover-switch">
+  <a href="images/P1190830.JPG" target="_blank" class="default">
+    <img src="images/P1190830.JPG" alt="Default image (P1190830.JPG)" class="hover-img default">
+  </a>
+  <img src="images/image (16).webp" alt="Alternate image (image (16).webp)" class="hover-img hover-version">
+</div>
     <h2>Thank You for Your Attention</h2>
     <p>
       Your safety is our priority, but a little bit of Finnish caution goes a long way. We hope you have a pleasant and accident-free stay with us. If you have any questions or spot something we should fix, please don’t hesitate to <a href="error_reporting_and_troubleshooting.html">let us know</a>.
