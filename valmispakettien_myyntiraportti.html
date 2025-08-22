@@ -134,6 +134,25 @@
       0%, 100% { box-shadow: 0 0 22px 7px #e30b0b77; }
       50% { box-shadow: 0 0 44px 16px #e30b0bbb; }
     }
+    .hover-switch {
+      position: relative;
+      display: inline-block;
+    }
+
+    .hover-switch .hover-version {
+      display: none;
+      transition: filter 0.3s;
+    }
+
+    .hover-switch:hover .default {
+      display: none;
+    }
+
+    .hover-switch:hover .hover-version {
+      display: block;
+      filter: brightness(0.62) contrast(1.45) grayscale(0.35) sepia(0.1) blur(1.5px);
+      box-shadow: 0 0 60px 10px #b5179e77;
+    }
   </style>
 </head>
 <body>
@@ -157,7 +176,12 @@
       All packages can be booked directly through our reception—usually with Anna Korhonen, our ever-helpful receptionist (<a href="guest_arrival_&_stay_information.html">Guest Arrival &amp; Stay Information</a>). Full payment is required at check-in.
     </p>
 
-    <img src="/Suoratalo/assets/image%20(18)-D01D_GVc.webp" alt="Reception area with Anna Korhonen at the front desk">
+    <div class="hover-switch">
+      <a href="images/P1190741.JPG" target="_blank" class="default">
+        <img src="/Suoratalo/assets/P1190741-c5oANfUg.JPG" alt="Default image (P1190741.JPG)" class="hover-img">
+      </a>
+      <img src="/Suoratalo/assets/image%20(18)-D01D_GVc.webp" alt="First picture - Reception area with Anna Korhonen" class="hover-img hover-version">
+    </div>
 
     <h4>Package Booking and Payment</h4>
     <p>

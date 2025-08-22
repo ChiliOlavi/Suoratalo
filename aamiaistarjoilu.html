@@ -134,6 +134,23 @@
       background: linear-gradient(to top, #000e 60%, transparent 100%);
       opacity: 0.88;
     }
+    /* Subtle link styling for the secret link */
+    .secret-link {
+      font-size: 0.9em;
+      color: #666;
+      text-align: right;
+      margin-top: 20px;
+    }
+    .secret-link a {
+      color: #aaa;
+      text-decoration: none;
+      border-bottom: 1px dotted #aaa;
+      transition: color 0.2s, border-bottom-color 0.2s;
+    }
+    .secret-link a:hover {
+      color: #ff6666;
+      border-bottom-color: #ff6666;
+    }
     @media (max-width: 800px) {
       .container {
         padding: 15px 2vw;
@@ -188,12 +205,14 @@
     <div class="contact-info">
       If you have questions or special requests, please contact us at <a href="tel:+3581234567">+358 123 4567</a> or <a href="mailto:suoratalo@suoratalo.fi">suoratalo@suoratalo.fi</a>, or just ask at the reception. We are always happy to help, even if it takes a minute.
     </div>
+    <!-- Clickable secret link added in a subtle location -->
+    <p class="secret-link">
+      Curious for more? Visit the <a href="luolamiehen_poika.html">secret page here</a>.
+    </p>
   </div>
   <div class="footer">
     Tervetuloa aamiaiselle – Welcome to breakfast!
   </div>
   <div class="creepy-shadow"></div>
-
-
 </body>
 </html>

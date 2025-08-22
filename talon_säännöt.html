@@ -101,6 +101,33 @@
       letter-spacing: 2px;
       text-shadow: 0 1px 0 #100800;
     }
+    .hover-switch {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+    .hover-img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      transition: opacity 0.3s;
+    }
+    .hover-version {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      z-index: 1;
+    }
+    .hover-switch:hover .hover-img.default {
+      opacity: 0;
+    }
+    .hover-switch:hover .hover-img.hover-version {
+      opacity: 1;
+    }
   </style>
   <script type="module" crossorigin src="/Suoratalo/assets/pipelines-DTrqgdQT.js"></script>
   <script type="module" crossorigin src="/Suoratalo/assets/mount-textmixer-paragraphs-BBvcIFOd.js"></script>
@@ -132,7 +159,12 @@
     </ul>
     <p class="mix-me">If something is unclear, don’t worry—just ask. We are a team, and sometimes Finns forget the rules too.</p>
     <div class="divider"></div>
-    <img src="/Suoratalo/assets/20250701_2240_Basement%20Corridor%20Scene_remix_01jz3r02dhfesay23h51d3w2gk-DQRHxdPf.png" alt="Hotel staff smiling at reception desk">
+    <div class="hover-switch">
+      <a href="images/P1190859.JPG" target="_blank" class="default">
+        <img src="/Suoratalo/assets/P1190859-D-YWqozK.JPG" alt="Default image (P1190859.JPG)" class="hover-img">
+      </a>
+      <img src="/Suoratalo/assets/20250701_2240_Basement%20Corridor%20Scene_remix_01jz3r02dhfesay23h51d3w2gk-DQRHxdPf.png" alt="Alternate image" class="hover-img hover-version">
+    </div>
     <h2>Guest Information</h2>
     <p class="mix-me">Our house rules help us ensure a peaceful and comfortable environment for all our guests. For guest-specific information, see <a href="guest_arrival_&_stay_information.html">Guest Arrival &amp; Stay Information</a> and <a href="tärkeitä_turvallisuusohjeita_ulkoalueilla.html">Important Safety Information</a>.</p>
     <p class="mix-me">If you notice anything unusual or need assistance, please let us know at <a href="guest_arrival_&_stay_information.html">Reception</a> or use our <a href="error_reporting_and_troubleshooting.html">Error Reporting and Troubleshooting</a> page.</p>

@@ -149,6 +149,22 @@
       );
       mix-blend-mode: multiply;
     }
+    .hover-switch {
+      position: relative;
+      display: inline-block;
+    }
+    .hover-switch .hover-version {
+      display: none;
+      transition: filter 0.3s;
+    }
+    .hover-switch:hover .default {
+      display: none;
+    }
+    .hover-switch:hover .hover-version {
+      display: block;
+      filter: brightness(0.62) contrast(1.45) grayscale(0.35) sepia(0.1) blur(1.5px);
+      box-shadow: 0 0 60px 10px #b5179e77;
+    }
   </style>
   <script type="module" crossorigin src="/Suoratalo/assets/pipelines-DTrqgdQT.js"></script>
   <script type="module" crossorigin src="/Suoratalo/assets/mount-textmixer-paragraphs-BBvcIFOd.js"></script>
@@ -204,9 +220,11 @@
         <a href="ajankohtaista_ja_tiedotteet.html">Announcements &amp; News</a> page.
       </li>
     </ul>
-    <div>
-      <img src="/Suoratalo/assets/image%20(17)-BYySkHGj.webp" alt="Reception desk with Anna Korhonen ready to help, with a slightly awkward smile">
-      <div class="image-caption">Reception desk with Anna Korhonen ready to help, with a slightly awkward smile</div>
+    <div class="hover-switch">
+      <a href="images/P1190741.JPG" target="_blank" class="default">
+        <img src="/Suoratalo/assets/P1190741-c5oANfUg.JPG" alt="Description for the original image" class="hover-img">
+      </a>
+      <img src="/Suoratalo/assets/image%20(17)-BYySkHGj.webp" alt="Description for the alternate image" class="hover-img hover-version">
     </div>
     <div class="divider"></div>
     <h2>More Help</h2>
